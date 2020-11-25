@@ -1,15 +1,25 @@
 #include <iostream>
 
+std::string selectionSort(std::string arr);
+
 int main()
 {
     using namespace std;
-    char arr[] = "475139286";
+    string arr;
 
-    for (int i = 0, length = strlen(arr); i < (length - 1); i++)
+    cout << "Gimme sequence of integers: ";
+    cin >> arr;
+    cout << "You gave me this sequence of integers: " << arr << endl;
+
+    cout << selectionSort(arr) << endl;
+    return 0;
+}
+
+std::string selectionSort(std::string arr)
+{
+    for (int i = 0, length = arr.length(); i < (length - 1); i++)
     {
-        int j = i + 1;
-
-        for (; j < length; j++)
+        for (int j = i + 1; j < length; j++)
         {
             if (arr[j] < arr[i])
             {
@@ -20,6 +30,5 @@ int main()
         }
     }
 
-    cout << "Result: " << arr << endl;
-    return 0;
+    return arr;
 }
