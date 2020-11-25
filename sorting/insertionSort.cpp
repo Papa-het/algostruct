@@ -1,12 +1,24 @@
 #include <iostream>
 
+std::string insertionSort(std::string arr);
+
 int main()
 {
     using namespace std;
 
-    char arr[] = "47586321";
+    string arr;
 
-    for (int i = 0, length = strlen(arr); i < length; i++)
+    cout << "Gimme sequence of integers: ";
+    cin >> arr;
+    cout << "You gave me this sequence of integers: " << arr << endl;
+
+    cout << insertionSort(arr) << endl;
+    return 0;
+}
+
+std::string insertionSort(std::string arr)
+{
+    for (int i = 0, length = arr.length(); i < length; i++)
     {
         int element = arr[i];
         int j = i;
@@ -20,6 +32,5 @@ int main()
         arr[j] = element;
     }
 
-    cout << "Result: " << arr << endl;
-    return 0;
+    return arr;
 }
