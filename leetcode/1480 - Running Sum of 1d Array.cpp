@@ -2,6 +2,7 @@
 
 // Return the running sum of nums.
 
+
 // Example 1:
 
 // Input: nums = [1,2,3,4]
